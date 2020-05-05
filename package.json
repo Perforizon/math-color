@@ -1,6 +1,6 @@
 {
-  "name": "@greirat/math",
-  "version": "1.0.0",
+  "name": "@perforizon/math",
+  "version": "1.0.1",
   "description": "",
   "main": "build/index.js",
   "types": "build/index.d.ts",
