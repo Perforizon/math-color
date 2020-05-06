@@ -1,4 +1,4 @@
-import {VEC4} from "../vec";
+import {VEC4} from "@perforizon/math";
 import {ValueToHex} from "./valueToHex";
 
 export const RGBAToHex = (color : VEC4) : string => {

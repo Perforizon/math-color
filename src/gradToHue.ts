@@ -1,5 +1,4 @@
-import {Lerp} from "../lerp";
-import {VEC4} from "../vec";
+import {Lerp, VEC4} from "@perforizon/math";
 
 // takes an input of [0 to 1] and maps it to [red-yellow-green-cyan-blue-magenta-red]
 export const GradToHue = (grad: number): VEC4 => {

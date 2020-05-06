@@ -1,10 +1,35 @@
-import {VEC4} from "../vec";
-
-export const HueToGrad = (color : VEC4) : number => {
+import {VEC4} from "@perforizon/math";
+// returns the hue of a color
+export const RGBAToHue = (color : VEC4) : VEC4 => {
+    // push colors channels into array of value : index
     let colorSorted : [number, number][] = new Array(3);
     for (let i = 0; i < 3; i++)
       colorSorted[i] = [color[i], i];
     colorSorted.sort(); 
+    
+    const hue : VEC4 = [0,0,0,1];
+    const LOW_CHANNEL = 0;
+    const MID_CHANNEL = 1;
+    const HIGH_CHANNEL = 2;
+    const VALUE = 0;
+    const INDEX = 1;
+    hue[colorSorted[HIGH_CHANNEL][INDEX]] = 1;
+    hue[colorSorted[LOW_CHANNEL][INDEX]] = 0;
+    const value = (colorSorted[HIGH_CHANNEL][VALUE]+colorSorted[LOW_CHANNEL][VALUE]);
+    // if highest and lowest color channel adds up to 0, this means they are both 0 and the hue could be theoretically anything,
+    // so just return the default color (red). Also avoids division by 0.
+    if (value == 0)
+      return [1,0,0,1];
+    hue[colorSorted[MID_CHANNEL][INDEX]] = colorSorted[MID_CHANNEL][VALUE]/value;
+    return hue;
+  }
+  
+  export const hueToGradient = (color : VEC4) : number => {
+    let colorSorted : [number, number][] = new Array(3);
+    for (let i = 0; i < 3; i++)
+      colorSorted[i] = [color[i], i];
+    colorSorted.sort(); 
+    const LOW_CHANNEL = 0;
     const MID_CHANNEL = 1;
     const HIGH_CHANNEL = 2;
     const VALUE = 0;

@@ -1,6 +1,4 @@
-import {VEC4, VEC2} from "../vec";
-import {VecMin} from "../min";
-import {VecMax} from "../max";
+import {VEC4, VEC2, VecMin, VecMax} from "@perforizon/math";
 
 export const RGBAToSBGrad = (color : VEC4) : VEC2 =>
 {

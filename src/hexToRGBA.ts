@@ -1,4 +1,4 @@
-import {VEC4} from "../vec";
+import {VEC4} from "@perforizon/math";
 import {HexToValue} from "./hexToValue";
 
 export const HexToRGBA = (text : string) : VEC4 => {

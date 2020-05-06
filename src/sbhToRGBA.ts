@@ -1,8 +1,5 @@
 
-import {VEC4} from "../vec";
-import {Vec4Splat} from "../splat";
-import {VecLerp} from "../lerp";
-import {VecMax} from "../max";
+import {VEC4, Vec4Splat, VecLerp, VecMax} from "@perforizon/math";
 
 export const SBHToRGBA = (
     saturation: number,
