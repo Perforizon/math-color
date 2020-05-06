@@ -1,8 +1,9 @@
 {
   "name": "@perforizon/math-color",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "main": "./src/index.ts",
+  "main": "./build/src/index.js",
+  "types": "./build/index.d.ts",
   "dependencies": {
     "@perforizon/math": "^1.0.19",
     "rimraf": "^3.0.2",

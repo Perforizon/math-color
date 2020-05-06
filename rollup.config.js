@@ -7,7 +7,7 @@ export default {
     input: ['./src/**/*'],
     output:
     {
-        dir: "./build",
+        dir: "build",
         format: "es",
         sourcemap: true,
     },
